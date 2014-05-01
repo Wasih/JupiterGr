@@ -1,0 +1,61 @@
+/* Color specific, only for app pages
+#f8f8c7 yellow
+#4b4b3f brown
+#4b4b3f lit brown (same)
+#a2a283 dim brown text (50%)
+#e3e3b7 shaded yellow (12% brown)
+*/
+body        {background-color:#f8f8c7; color:#4b4b3f;}
+.bgcolor    {background-color:#f8f8c7; color:#4b4b3f;}
+.plain      {color:#4b4b3f;}
+.inverse    {background-color:#000000; color:#ffffff;}
+.lit        {background-color:#4b4b3f; color:#ffffff;}
+.hilite     {background-color:#ffffff; color:#4b4b3f;}
+.dim        {color:#a2a283;}
+.tipbox     {border:2px solid #f8f8c7; border-radius:9px; -webkit-border-radius:9px; -moz-border-radius:9px; position:absolute; z-index:99998;}
+.graph      {background-color:#4b4b3f;}
+.graph2     {background-color:#a2a283; color:#f8f8c7;}
+.shade      {background-color:#e3e3b7;}
+
+.tablit     {background-color:#4b4b3f; background-image:url(../yellow/tab.png); background-repeat:repeat-x; color:#ffffff;}
+.tablitl    {background-color:#4b4b3f; background-image:url(../yellow/tabl.png); background-repeat:no-repeat;}
+.tablitr    {background-color:#4b4b3f; background-image:url(../yellow/tabr.png); background-repeat:no-repeat;}
+.tabopen    {background-color:#f8f8c7; background-image:url(../yellow/tab.png); background-repeat:repeat-x; color:#4b4b3f;}
+.tabopenl   {background-color:#f8f8c7; background-image:url(../yellow/tabl.png); background-repeat:no-repeat;}
+.tabopenr   {background-color:#f8f8c7; background-image:url(../yellow/tabr.png); background-repeat:no-repeat;}
+
+.btn         {background-color:#000000; color:#ffffff;}
+.btnl        {background-image:url(../yellow/btnl.png); background-repeat:no-repeat;}
+.btnr        {background-image:url(../yellow/btnr.png); background-repeat:no-repeat;}
+.btnp        {background-image:url(../yellow/btnp.png); background-repeat:no-repeat;}
+.btnopenl    {background-image:url(../yellow/btnopenl.png); background-repeat:no-repeat;}
+.btnopenp    {background-image:url(../yellow/btnopenp.png); background-repeat:no-repeat;}
+.btnlit      {background-color:#4b4b3f; color:#ffffff;}
+.btnlitl     {background-image:url(../yellow/btnlitl.png); background-repeat:no-repeat;}
+.btnlitr     {background-image:url(../yellow/btnlitr.png); background-repeat:no-repeat;}
+.btnlitp     {background-image:url(../yellow/btnlitp.png); background-repeat:no-repeat;}
+.btnopenlitl {background-image:url(../yellow/btnopenlitl.png); background-repeat:no-repeat;}
+.btnopenlitp {background-image:url(../yellow/btnopenlitp.png); background-repeat:no-repeat;}
+.btndim      {background-color:#000000; color:#a2a283;}
+.btni        {background-color:#ffffff; background-image:url(../yellow/btni.gif); background-repeat:repeat-x; color:#000000;}
+.btnil       {background-color:#ffffff; background-image:url(../yellow/btnil.gif); background-repeat:no-repeat;}
+.btnir       {background-color:#ffffff; background-image:url(../yellow/btnir.gif); background-repeat:no-repeat;}
+.btnidim     {background-color:#ffffff; background-image:url(../yellow/btni.gif); background-repeat:repeat-x; color:#a2a283;}
+
+a:link, a:visited                           {color:#4b4b3f; cursor:default; text-decoration:none;}
+a:hover, a:active, .ahover                  {color:#000000; cursor:default; text-decoration:underline;}
+a:link.inverse, a:visited.inverse           {color:#ffffff; cursor:default; text-decoration:none;}
+a:hover.inverse, a:active.inverse, .aihover {color:#ffffff; cursor:default; text-decoration:underline;}
+a:link.hyperlink, a:visited.hyperlink       {color:#4b4b3f; cursor:default; text-decoration:underline;}
+a:hover.hyperlink, a:active.hyperlink       {color:#000000; cursor:default; text-decoration:underline;}
+
+.unlitegif {border-color:#e5e5a5;}
+.hilitegif {border-color:#000000;}
+.unlitetxt {color:#4b4b3f;}
+.hilitetxt {color:#000000;}
+
+.seat        {position:absolute; text-align:center; overflow:hidden; white-space:nowrap; border:1px solid #f8f8c7; color:#ffffff; background-color:#4b4b3f;}
+.seatlit     {position:absolute; text-align:center; overflow:hidden; white-space:nowrap; border:1px solid #f8f8c7; color:#ffffff; background-color:#000000;}
+.unseat      {position:absolute; text-align:center; overflow:hidden; white-space:nowrap; border:1px dashed #4b4b3f; color:#4b4b3f;}
+.seatphoto   {position:absolute; border:1px solid #f8f8c7;}
+.unseatphoto {position:absolute; border:1px solid #f8f8c7; opacity:0.5; filter:alpha(opacity=50);}

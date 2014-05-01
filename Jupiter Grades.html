@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Jupiter Grades</title>
+<meta name="viewport" content="width=480, initial-scale=1.0, user-scalable=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" type="text/css" href="Jupiter%20Grades_files/macfox.css">
+<link rel="stylesheet" type="text/css" href="Jupiter%20Grades_files/yellow.css">
+<link rel="stylesheet" type="text/css" href="Jupiter%20Grades_files/student.css">
+<script src="Jupiter%20Grades_files/1.js"></script>
+<script src="Jupiter%20Grades_files/student.js"></script>
+<script>
+
+function gogrades(class1,term) {
+	settext('class1',class1);
+	settext('term',term);
+	settext('track',0);
+	gost('grades');
+}
+
+function gofiles(ur) {
+	settext('filemenu',ur);
+	gost('downloads');
+}
+
+</script>
+<style>
+.printonly {display:none}
+</style>
+<style media="print">
+.noprint, pre {display:none}
+.printonly    {display:inline}
+body          {background-color:#ffffff; color:#000000}
+td, div       {color:#fff; font-family:Arial; font-size:13px;}
+.big          {color:#000000; font-family:Arial; font-size:15px; font-weight:bold;}
+.small        {color:#aaaadd; font-family:Arial; font-size:9px;}
+.dim          {color:#aaaadd}
+a:link, a:visited, a:hover, a:active, a:link.hyperlink, a:visited.hyperlink, a:hover.hyperlink, a:active.hyperlink
+							{color:#000000; text-decoration:none}
+.hilite       {background-color:#f0f0ff}
+</style>
+</head>
+<body style="margin-bottom:8px">
+<form name="form1" onsubmit="return false" action="../teacher/0.php?618184667" method="post" autocomplete="off">
+<input name="from" value="dashboard" type="hidden">
+<input name="to" type="hidden">
+<input name="save" type="hidden">
+<input name="session" value="618184667" type="hidden">
+<input name="server" value="1" type="hidden">
+<input name="district" value="36014" type="hidden">
+<input name="stud" value="4564957" type="hidden">
+<input name="contact" value="0" type="hidden">
+<input name="class1" value="3680526" type="hidden">
+<input name="track" value="1" type="hidden">
+<input name="term" value="6" type="hidden">
+<input name="licgroup" value="1" type="hidden">
+<input name="feesonline_20132014_4564957" value="0" type="hidden">
+<input name="jserror" type="hidden">
+
+
+<div id="busy" class="hide" style="position:absolute; top:40%; width:100%; text-align:center">
+	<img src="Jupiter%20Grades_files/busy.gif">
+</div>
+
+
+
+
+
+<!-- REGULAR NAV-BAR -->
+<table class="inverse noprint" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td style="padding:0px 20px" height="28" nowrap="nowrap" width="100%">
+<!-- CHANGE STUD -->
+<select class="menui" name="changestud" onchange="gost()">
+	<option value="0" selected="selected">John Doe
+</option></select>&nbsp;
+
+<!-- SCHOOL YEAR -->
+<select class="menui" name="schoolyear" onchange="changeschoolyear()">
+	<option value="36014,20132014" selected="selected">Curtis High School, 2013-2014
+</option></select>
+		</td>
+	</tr>
+</tbody></table>
+
+<!-- PAGE -->
+<table id="showpage" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr valign="top">
+		<td class="padr20 noprint">
+			<table class="inverse" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr><td colspan="3" height="8"></td></tr>
+				<tr>
+					<td class="studcap" height="24" width="20"></td>
+					<td class="bgcolor" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Overview</div></td>
+				</tr>
+				<tr onclick="gost('grades')" onmouseover="overnav('grades')" onmouseout="outnav('grades')">
+					<td id="grades1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="grades2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Grades</div></td>
+				</tr>
+				<tr onclick="gost('homework')" onmouseover="overnav('homework')" onmouseout="outnav('homework')">
+					<td id="homework1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="homework2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Homework</div></td>
+				</tr>
+				<tr onclick="gost('calendar')" onmouseover="overnav('calendar')" onmouseout="outnav('calendar')">
+					<td id="calendar1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="calendar2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Calendar</div></td>
+				</tr>
+				<tr onclick="gost('assignment')" onmouseover="overnav('assignment')" onmouseout="outnav('assignment')">
+					<td id="assignment1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="assignment2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Assignment</div></td>
+				</tr>
+				<tr onclick="gost('downloads')" onmouseover="overnav('downloads')" onmouseout="outnav('downloads')">
+					<td id="downloads1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="downloads2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div><a href="https://www.facebook.com/antoun.sawires">Facebook</a>
+                    
+				<tr onclick="gost('locker')" onmouseover="overnav('locker')" onmouseout="outnav('locker')">
+					<td id="locker1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="locker2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div><a href="https://drive.google.com">Google Drive</a>
+                    
+				</tr>
+				<tr><td colspan="3" height="16"></td></tr>
+				<tr onclick="gost('reportcard')" onmouseover="overnav('reportcard')" onmouseout="outnav('reportcard')">
+					<td id="reportcard1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="reportcard2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Report Card</div></td>
+				</tr>
+				<tr onclick="gost('attendance')" onmouseover="overnav('attendance')" onmouseout="outnav('attendance')">
+					<td id="attendance1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="attendance2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Attendance</div></td>
+				</tr>
+				<tr onclick="gost('discipline')" onmouseover="overnav('discipline')" onmouseout="outnav('discipline')">
+					<td id="discipline1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="discipline2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Behavior Log</div></td>
+				</tr>
+				<tr><td colspan="3" height="16"></td></tr>
+				<tr onclick="gost('settings')" onmouseover="overnav('settings')" onmouseout="outnav('settings')">
+					<td id="settings1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="settings2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Settings</div></td>
+				</tr>
+				<tr onclick="gost('video')" onmouseover="overnav('video')" onmouseout="outnav('video')">
+					<td id="video1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="video2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Video Tour</div></td>
+				</tr>
+				<tr onclick="gost('logout')" onmouseover="overnav('logout')" onmouseout="outnav('logout')">
+					<td id="logout1" class="inverse" style="padding-left:20px" height="24"></td>
+					<td id="logout2" class="inverse" colspan="2" style="padding-right:12px" height="24" nowrap="nowrap"><div class="smtab">Logout</div></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right"><img src="Jupiter%20Grades_files/studcorner.png" height="12" width="12"></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td style="padding-top:12px">
+
+
+<input name="filemenu" type="hidden">
+<input name="ass" value="0" type="hidden">  <!--remember for assignment-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr>
+		<td>
+
+<div class="noprint" style="padding:0px 20px">
+CURTIS WILL BE INVOLVED IN AN EVENT SPONSORED BY NIKE TOMORROW EVENING 
+AND PART OF THE EVENT IS FAN PARTICIPATION.  THEY WILL BE JUDGING FAN 
+PARTICIPATION THROUGH SOCIAL MEDIA, IF YOU HAVE A TWITTER ACCOUNT OR 
+INSTAGRAM  PLEASE DOWNLOAD THE PICTURE AT <a href="http://www.nikefastnight.com/WARRIORS" target="link" onclick="event.stopPropagation()"><u class="print">WWW.NIKEFASTNIGHT.COM/WARRIORS</u></a> AND POST WITH THE HASHTAG #UNLEASHTHEWARRIORS<br><br>
+
+<select class="menu" name="datemenu" onchange="gost('')">
+	<option value="2013-09-09">Marking Period 1
+	</option><option value="2013-10-19">Marking Period 2
+	</option><option value="2013-12-09">Marking Period 3
+	</option><option value="2014-02-04">Marking Period 4
+	</option><option value="2014-03-20" selected="selected">Marking Period 5
+	</option><option value="2014-05-07">Marking Period 6
+</option></select><br>
+Click any class to see details.<br>
+&nbsp;</div>
+
+<span class="printonly">
+<div class="pad20">
+<div class="big">Antoun Sawires</div>
+Apr 30, 2014<br>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+</div>
+</span>
+
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3681102,8)">Global History Term 2 of 4</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3681102,8)">100.0% &nbsp; A+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap"><span class="noprint">&nbsp; <a href=>email</a></span><span class="noprint">&nbsp; <a target="168406" href="http://www.curtishs.org/">web</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">2nd Semester</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3681102,8)">Missing assignments: 1</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"><a href="javascript:gost('attendance')">Tardy: 4</a>, <a href="javascript:gost('attendance')">Absent: 3</a></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680856,6)">English 9 Term 2 of 8</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3680856,6)">100.0% &nbsp; A+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap">Jason Bresowsky<span class="noprint">&nbsp; <a href="mailto:jbresow@schools.nyc.gov">email</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">Marking Period 5</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680856,6)">Missing assignments: 0</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680526,6)">Mos Term 2 of 2</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3680526,6)">100.0% &nbsp; A+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap">Mrs. Panazzolo<span class="noprint">&nbsp; <a href="mailto:cpanazz@schools.nyc.gov">email</a></span><span class="noprint">&nbsp; <a target="166577" href="http://www.curtishs.org/">web</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">Marking Period 5</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680526,6)">Missing assignments: 0</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"><a href="javascript:gost('attendance')">Tardy: 0</a>, <a href="javascript:gost('attendance')">Absent: 1</a></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3681168,6)">M Physical Education</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3681168,6)">100.0% &nbsp; A+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap">Mr. Gonzalez<span class="noprint">&nbsp; <a href="mailto:mgonzal37@schools.nyc.gov">email</a></span><span class="noprint">&nbsp; <a href="javascript:gofiles('178686,1451855')">files</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">Marking Period 5</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3681168,6)">Missing assignments: 0</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680638,8)">Integrated Algebra Term 2 of 4</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3680638,8)">100.0% &nbsp; B-</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap"><span class="noprint">&nbsp; <a href=>email</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">2nd Semester</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680638,8)">Missing assignments: 0</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"><a href="javascript:gost('attendance')">Tardy: 1</a>, <a href="javascript:gost('attendance')">Absent: 5</a></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680845,8)">Living Environment Term 2 of 2</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3680845,8)">100.0% &nbsp; B+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap"><span class="noprint">&nbsp; <a href="">email</a></span><span class="noprint">&nbsp; <a href="javascript:gofiles('155769,1452334')">files</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">2nd Semester</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680845,8)">Missing assignments: 1</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"><a href="javascript:gost('attendance')">Tardy: 0</a>, <a href="javascript:gost('attendance')">Absent: 5</a></td>
+	</tr>
+</tbody></table>
+<br>
+
+<table class="hilite" border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr><td style="height:4px"></td></tr>
+	<tr>
+		<td class="big" style="padding:0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680951,6)">Spanish Level I Term 2 of 6</a></td>
+		<td width="100%"></td>
+		<td class="big" style="padding-right:20px" nowrap="nowrap"><a href="javascript:gogrades(3680951,6)">100.0% &nbsp; A+</a></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding:0px 20px" nowrap="nowrap">Mr. Burton<span class="noprint">&nbsp; <a href="mailto:rburton3@schools.nyc.gov">email</a></span></td>
+		<td width="100%"></td>
+		<td style="padding-right:20px" nowrap="nowrap">Marking Period 5</td>
+	</tr>
+	<tr><td style="height:4px"></td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="480">
+	<tbody><tr valign="top">
+		<td style="padding:6px 0px 0px 20px" nowrap="nowrap"><a href="javascript:gogrades(3680951,6)">Missing assignments: 0</a></td>
+		<td style="padding:6px 20px 0px 20px" align="right" nowrap="nowrap"><a href="javascript:gost('attendance')">Tardy: 0</a>, <a href="javascript:gost('attendance')">Absent: 1</a></td>
+	</tr>
+</tbody></table>
+<br>
+
+		</td>
+	</tr>
+</tbody></table>
+
+<br>
+<div class="small" align="center">
+These grades are unofficial and may differ from your transcript.<span class="printonly">Generated 4/30/14 9:39pm PDT by JupiterEd.com</span>
+</div>
+
+
+		</td>
+	</tr>
+</tbody></table> <!--showpage-->
+</form>
+
+
+</body></html>

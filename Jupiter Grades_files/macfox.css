@@ -1,0 +1,57 @@
+/* for Mac Firefox, no specific color, for any page */
+body           {margin:38px 0px 40px 0px; cursor:default;}
+body,.plain    {font-family:Lucida Grande,Arial; font-size:12px; line-height:15px; font-weight:normal; font-style:normal;}
+.small         {font-size:10px; font-weight:normal; line-height:normal;}
+.big,.printbig {font-size:14px; line-height:20px; font-weight:bold; line-height:normal;}
+.fat           {font-size:15px; font-family:Arial Black,Arial}
+.bold          {font-weight:bold}
+.smtab         {padding-bottom:1px}
+.bigtab        {padding: 0px 4px 1px 4px; font-size:14px; font-weight:bold}
+.btntxt        {line-height:21px; text-align:center;}
+
+.textbox   {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:2px 0px 0px 0px;   padding:1px 0px 2px 2px; cursor:text;}
+.textbox0  {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:0px -1px -1px 0px; padding:1px 0px 2px 2px; cursor:text;}  /* no margin */
+.textboxg  {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:0px -1px -1px 0px; padding:1px 0px 2px 2px; cursor:text;}  /* grid */
+.textarea  {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:2px 0px 0px 0px;   padding:1px 0px 2px 2px; cursor:text;}
+.textarea0 {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:0px 0px -1px 0px;  padding:1px 0px 2px 2px; cursor:text;}
+.menu      {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:2px 0px 0px 0px;   padding:0px 0px 0px 0px; height:20px;}  /* table */
+.menui     {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:2px 0px 0px 0px;   padding:0px 0px 0px 0px; height:20px;}  /* inline (see winexp) */
+.menu0     {font-family:Lucida Grande,Arial; font-size:12px; border:1px solid #aaaaaa; margin:0px 0px -1px 0px;  padding:0px 0px 0px 0px; height:20px;}  /* no margin */
+.listbox   {font-family:Lucida Grande,Arial; font-size:12px;}
+.checkbox  {margin:2px 1px 0px 0px; vertical-align:0px;}
+.radio     {margin:3px 1px 0px 0px; vertical-align:-1px;}
+.button       {font-family:Lucida Grande,Arial; font-size:12px; margin:1px 0px -2px 0px;}
+.texthead     {padding-top:2px;}
+.textareahead {padding-top:4px;}
+.checkhead    {padding-top:1px;}
+.radiohead    {padding-top:1px;}
+.indent       {padding-left:19px;}
+
+.red        {color:#ff0000;}
+.redinverse {background-color:#ff0000; color:#ffffff;}
+.buttons    {position:absolute; top:auto; right:20px; z-index:99997}
+.busy       {position:absolute; bottom:60%; width:100%; text-align:center;}
+.redbar     {background-color:#ff0000; height:8px; border-radius:4px; -moz-border-radius:4px;}
+.greenbar   {background-color:#00aa22; height:8px; border-radius:4px; -moz-border-radius:4px;}
+.bluebar    {background-color:#7a7acb; height:8px; border-radius:4px; -moz-border-radius:4px;}
+.rounded    {border-radius:9px; -moz-border-radius:9px;}
+.roundtop   {border-top-right-radius:9px; border-top-left-radius:9px; -moz-border-radius-topleft:9px; -moz-border-radius-topright:9px;}
+.roundbot   {border-bottom-right-radius:9px; border-bottom-left-radius:9px; -moz-border-radius-bottomleft:9px; -moz-border-radius-bottomright:9px;}
+.cal        {padding:2px 4px; text-align:center}
+.clip       {overflow:hidden}
+.accordion  {overflow:hidden; transition:height .2s ease-out; -moz-transition:height .2s ease-out;}
+.shadow     {box-shadow: 0px 2px 4px rgba(0,0,0,0.2); -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);}
+
+.pad20      {padding-left:20px}
+.pad12      {padding-left:12px}
+.padr20     {padding-right:20px}
+.padr12     {padding-right:12px}
+.padr8      {padding-right:8px}
+p           {margin:6px 0px 0px 0px}
+.hide       {display:none;}
+.show       {visibility:visible;}
+.spacer     {visibility:hidden;}
+
+pre {font-family:Lucida Grande,Arial; font-size:11px; line-height:13px; background-color:#ffffff; color:#999999; padding-left:20px;}
+.black {color:#000000;}
+.faint {color:#dddddd;}
